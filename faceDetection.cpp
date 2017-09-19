@@ -21,51 +21,6 @@ using namespace AL;
 using namespace cv;
 
 
-/*
-void fixHead(){
-
-	  const AL::ALValue jointName = "HeadYaw";
-	  const AL::ALValue jointName2 = "HeadPitch";
-
-
-	  try {
-
-	    AL::ALMotionProxy motion(pip, pport);
-
-	    AL::ALValue stiffness = 1.0f;
-
-	    		AL::ALValue time = 1.0f;
-	    motion.stiffnessInterpolation(jointName, stiffness, time);
-	    motion.stiffnessInterpolation(jointName2, stiffness, time);
-
-	    AL::ALValue targetAngles = AL::ALValue::array(-1.5f, 1.5f, 0.0f);
-
-	    AL::ALValue targetTimes = AL::ALValue::array(3.0f, 6.0f, 9.0f);
-
-	    bool isAbsolute = true;
-
-
-	    int x;
-	    while(true){
-	     if(x ==1 )
-	        motion.angleInterpolation(jointName, targetAngles, targetTimes, isAbsolute);
-	     if(x== 2)
-	    	motion.angleInterpolation(jointName2, targetAngles, targetTimes, isAbsolute);
-	     if(x==3) break;
-	    }
-	    stiffness = 0.0f;
-	    time = 1.0f;
-	    motion.stiffnessInterpolation(jointName, stiffness, time);
-	    motion.stiffnessInterpolation(jointName2, stiffness, time);
-
-	  }
-	  catch (const AL::ALError& e) {
-	    std::cerr << "Caught exception: " << e.what() << std::endl;
-	    exit(1);
-	  }
-
-}
-*/
 
 void detectFace(const std::string& robotIp)
 {
